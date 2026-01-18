@@ -1,0 +1,34 @@
+#! /usr/bin/env bash
+
+set -euo pipefail
+IFS=$'\n\t'
+
+base="/test"
+sub='/test-repo'
+
+if [[ -d $dir ]]; then
+    echo "$base/$sub exists deleting for current script code"
+    echo 'rm "$base/$sub'
+    echo 'cargo new ./test/test-repo'
+else
+    true
+fi
+
+#TODO write command running function that either prints or runs real command
+echo_cmd() {
+    printf '%q ' "$@"
+    echo
+
+}
+
+dry-run() {
+    local is_dry_run=$1
+    local is_dry_run_str=$2
+
+    if [[ is_dry_run == true && is_dry_run_str == "dryrun" ]]; then
+
+    else
+        true
+
+    fi
+}

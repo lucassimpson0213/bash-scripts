@@ -1,0 +1,17 @@
+#! /usr/bin/env bash
+
+base="/test"
+sub='/test-repo'
+
+if [[ -d $dir ]]; then
+    echo "$base/$sub exists deleting for current script code"
+    echo 'rm "$base/$sub'
+    echo 'cargo new ./test/test-repo'
+else
+    true
+fi
+
+#TODO write command running function that either prints or runs real command
+dry-run() {
+
+}
